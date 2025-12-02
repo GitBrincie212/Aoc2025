@@ -1,0 +1,1 @@
+The best ineffecient solutions you can find in the market for Aoc2025! Honestly i didn't mind too much performance as at worst they take around 1-2 seconds (not bad). Of course in real-world scenarios, its worth knowing how to optimize for performance
