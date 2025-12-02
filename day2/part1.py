@@ -7,15 +7,20 @@ def main():
     [num_ranges, max_num] = parse_ranges("./input.txt")
     max_num_digits = count_digits(max_num)
     invalid_sums = 0
+    repeaters = set()
     x = 1
     while True:
         repeated = rep_digit(x)
         if repeated >= max_num or count_digits(repeated) > max_num_digits:
             break
-        for num_range in num_ranges:
-            if num_range[0] <= repeated <= num_range[1]:
-                invalid_sums += repeated
+        repeaters.add(repeated)
         x += 1
+
+    for repeat in repeaters:
+        for num_range in num_ranges:
+            if num_range[0] <= repeat <= num_range[1]:
+                invalid_sums += repeat
+
     print(invalid_sums)
 
 
